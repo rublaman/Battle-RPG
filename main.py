@@ -45,15 +45,14 @@ enemy3 = Person("Faico  :", 1500, 130, 560, 325, enemy_spells, [])
 players = [player1, player2, player3, player4]
 enemies = [enemy1, enemy2, enemy3]
 
-
 running = True
 i = 0
 
 print(bcolors.FAIL + bcolors.BOLD + "AN ENEMY ATTACKS" + bcolors.ENDC)
 
 while running:
-    print("=======================")
-    print("NAME                 HP                      MP")
+    print('='*80)
+    print(bcolors.BOLD + "NAME\t\t\t\t\t\t\t\tHP\t\t\t\t\t\t\tMP" + bcolors.ENDC)
 
     for player in players:
          player.get_stats()
@@ -194,5 +193,3 @@ while running:
                 if players[target].get_hp() == 0:
                     print(players[target].name.replace(" ", "") + " has died.")
                     del players[player]
-
-            #print("Enemy chose", spell, "damage is", magic_dmg)
